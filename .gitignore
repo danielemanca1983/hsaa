@@ -2,3 +2,11 @@ source-content/
 *.zip
 logo.gif
 scripts/read-content.py
+
+content-audit/
+.packaging/content-tools/
+scripts/__pycache__/
+
+# Local packaging output
+.packaging/
+*.tar.gz

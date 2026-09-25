@@ -1,22 +1,35 @@
-﻿# HSAA website
+# HSAA website
 
-Open dist/index.html in a browser. No installation or build step is required.
+Open `dist/index.html` in a browser. No installation is required to view the site.
 
-- dist/html/ — 17 complete, interlinked HTML pages
-- dist/css/styles.css — shared styles; logo accent is --blue
-- dist/js/main.js — accessible navigation and results email preparation
-- dist/assets/ — supplied logo and selected HSAA photographs
+- `dist/`: six complete HTML pages together: `index.html`, `about.html`, `contact.html`, `football.html`, `other-sports.html` and `information.html`.
+- The main navigation links to the five main pages; the header Get in touch button opens the dedicated contact page. Sitemap subsections appear as normal content within their parent pages, including contact information under About us; there are no separate content-fragment pages or duplicate homepage.
+- `dist/css/styles.css` and `dist/js/main.js`: shared styling, menus, ticker and email forms.
+- `dist/assets/source/`: reviewed supplied photos and extracted logos.
+- `dist/downloads/`: the reviewed blank alumni membership form.
 
-Upload the contents of dist/ to a static web host, preserving its folders.
-The root index.html is a full homepage with a base pointing into html/.
+Upload the contents of `dist/` to a static web host, preserving its folders. `hsaa-website.zip` contains those deployable files.
 
-Pages can be edited directly. scripts/build-pages.py regenerates the HTML from its embedded copy and overwrites direct HTML edits; if using it, edit the copy in that script first. Run python scripts/check-site.py to check local links and node --check dist/js/main.js to check JavaScript syntax.
+## Editing and rebuilding
 
-Content notes:
-- The supplied introduction says 1881, but the centenary date and old website imply 1891. No association founding year is asserted.
-- The requested name uses Athletics; the original crest says Athletic and is reproduced unchanged.
-- Cross country, kwik cricket, tag rugby (labelled Tag touch per the requested sitemap) and orienteering are described as planned for 2026–27, as supplied.
-- Detailed five-a-side rules, fixtures, future event dates and eligibility were not provided. Pages direct enquiries to info@hsaa.org.uk.
-- Results forms open the visitor's email app. They do not send or store data themselves and require an email app to be configured.
-- No social media login document or other source Office files are included in dist/.
-- Additional archive topics outside the requested sitemap have not been made into separate pages.
+- Edit `scripts/page_structure.py` for the page grouping and section links.
+- Edit `scripts/navigation.py` for the shared navigation.
+- Edit `content/pages/*.html` for the long-form public copy.
+- Edit `content/people.json` for former players, association figures and partners.
+- Edit `content/records.json` for the Lester Finch archive.
+- Edit `scripts/additional-pages.py` for page assembly, results forms and other-sports summaries.
+- Edit `scripts/build-pages.py` for the shared shell, homepage layout and ticker headlines.
+
+Run `python scripts/build-pages.py` to regenerate the site. Direct edits to generated HTML will be overwritten. The fragments in `content/pages/` are build inputs only; every published page in `dist/` already contains its complete content. Normal builds need only Python’s standard library; the one-off Office/image extraction scripts are not required.
+
+## Checks
+
+Run `python scripts/check-site.py`, `python scripts/check-content.py`, `node --check dist/js/main.js`, and `node scripts/check-form-behavior.js`.
+
+## Content status
+
+Read [CONTENT-REPORT.md](CONTENT-REPORT.md) for missing information, conflicting historical details and editorial decisions. The file-by-file inventory is [source-content-map.md](source-content-map.md).
+
+The Contact page includes the supplied Facebook page name and Instagram, X and TikTok handles. Forms prepare emails and do not send or store submissions themselves. Future events are labelled as planned when dates have not been supplied. No login-information document is published.
+
+The site has been updated locally; it has not been deployed.
