@@ -32,4 +32,17 @@ Read [CONTENT-REPORT.md](CONTENT-REPORT.md) for missing information, conflicting
 
 The Contact page includes the supplied Facebook page name and Instagram, X and TikTok handles. Forms prepare emails and do not send or store submissions themselves. Future events are labelled as planned when dates have not been supplied. No login-information document is published.
 
-The site has been updated locally; it has not been deployed.
+## Live preview
+
+The site is published on GitHub Pages at https://danielemanca1983.github.io/hsaa/.
+GitHub Pages serves the root of the `gh-pages` branch, containing only `dist/`.
+
+After committing updated site files on `master`, publish them with:
+
+```sh
+git subtree split --prefix dist -b pages-update
+git push origin pages-update:gh-pages
+git branch -D pages-update
+```
+
+GitHub Pages rebuilds automatically when the publishing branch is updated.
