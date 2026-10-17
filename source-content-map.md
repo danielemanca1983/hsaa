@@ -48,3 +48,22 @@ Every file in `source-content` is accounted for below. Source files remain uncha
 | Sections  for  website as per Site Map / Site Map (2).png | Reference for parent-page sections, reconciled with the re-shared Site Map.png on 20 September 2026; existing navigation preserved |
 
 The re-shared `Site Map.png` was used to verify section placement on 20 September 2026. See the sitemap reconciliation table in CONTENT-REPORT.md.
+
+## October 2026 final updates
+
+The original files remain in `Final Updates Oct 2026/`; the site serves renamed copies from `dist/`.
+All public HTML content is now edited in the six complete files in `content/pages/`, with `content/pages/information.html` containing the former Contacts & Supporters and Illuminaries fragments.
+
+| Supplied file | Published destination |
+| --- | --- |
+| `Update into the various sections.doc` | Instructions applied to Home, About us, Football, Other Sporting Competitions and Information |
+| `HACKNEY SCHOOLS ATHLETIC ASSOCIATION MEET DATES WEBSITE.pdf` | `dist/downloads/cross-country-meet-dates-2026-27.pdf` |
+| `HSAA EXECUTIVE COMMITTEE MEMBERS.pdf` | `dist/downloads/hsaa-executive-committee-members.pdf` |
+| `HSSA Five a side School Competition Draw 2627.pdf` | `dist/downloads/hsaa-five-a-side-draw-2026-27.pdf` |
+| `JL Girls District Trophy 26-27 final.pdf` | `dist/downloads/john-larter-girls-draw-2026-27.pdf` |
+| `Kay Trophy 26-27 FINAL.pdf` | `dist/downloads/kay-trophy-draw-2026-27.pdf` |
+| `Kay Trophy 26-27.pdf` | Not published; the supplied final version is used |
+| `Lester Finch Trophy 2026-27 Draw & Matches.pdf` | `dist/downloads/lester-finch-draw-and-matches-2026-27.pdf` |
+| `JA11 - Black_Logo_RGB.jpg` | `dist/assets/source/jaidon-anthony-11.jpg` |
+| `LOGO-School-Games.jpg` | `dist/assets/source/school-games.jpg` |
+| `Young & Active Logo - Yellow (black writing).png` | `dist/assets/source/young-active-2030.png` |

@@ -4,7 +4,7 @@
 
 The supplied public content has been mapped to the revised navigation and implemented in the local site. The audit accounts for all 42 files in `source-content`: 21 public Word/PowerPoint documents, 18 images, one legacy web page, one login-information document and one macOS metadata file.
 
-The site contains five main pages (Home, About us, Football, HSAA Other Sporting Competitions and Information), plus the existing Get in touch page. Sitemap topics are sections within their parent pages. It now includes the full historical account, school competition histories, named five-a-side trophies, district team programmes, foundation copy, 33 former players, 10 association figures, 13 partner organisations, 56 Lester Finch season entries, the supplied trophy totals, the alumni membership information and blank form, and the supplied relevant photographs and logos.
+The site contains five main pages (Home, About us, Football, HSAA Other Sporting Competitions and Information), plus the existing Get in touch page. Sitemap topics are sections within their parent pages. It now includes the full historical account, school competition histories, named five-a-side trophies, district team programmes, foundation copy, 38 former players, 15 association figures, 15 partner organisations, 56 Lester Finch season entries, the supplied trophy totals, the alumni membership information and blank form, and the supplied relevant photographs and logos.
 
 Social media: public account names and handles from the supplied document are included on the Contact page. Login details and the source document are not published.
 
@@ -12,12 +12,12 @@ Social media: public account names and handles from the supplied document are in
 
 | Priority | Missing or unclear content | Current treatment |
 | --- | --- | --- |
-| High | Current executive committee: approved names, roles and any intended contact details | The committee folder contains only a team photograph. The committee section directs enquiries to HSAA. Historical association figures are listed separately; they have not been presented as the current committee. |
-| High | Confirmed fixtures, draws, scores, league tables and next-season competition dates | The two Results Services prepare emails. No live results feed or current fixtures were supplied. The ticker uses dated news already present in the supplied copy. |
-| High | Competition entry details: five-a-side rules, eligible year groups, venues and dates; next nine-a-side arrangements; Kay/John Larter/Lester Finch competition rules and schedules | Available names, histories, age groups and descriptions are included. Visitors are directed to HSAA for the remaining arrangements. |
+| High | Current executive committee contact details and any web-page roster beyond the supplied PDF | The October 2026 committee document is linked from About us. Historical association figures remain separate. |
+| High | Scores, league tables, live results and any fixtures beyond the supplied 2026–27 draws and cross-country meet dates | The new PDFs are linked from their relevant sections. The two Results Services prepare emails; there is no live results feed. |
+| High | Competition entry details: five-a-side rules, eligible year groups and venues; next nine-a-side arrangements; Kay/John Larter/Lester Finch competition rules | The supplied 2026–27 draws are available as PDFs. Visitors are directed to HSAA for remaining arrangements. |
 | High | Correct direct emails for Michael MacNeill and Steve Herbert | The files contain `michael.macneill@gll,com` and `steveh@springfieldclub.co,uk`. These malformed addresses were not published or silently guessed. Names and roles are included, with enquiries routed through `info@hsaa.org.uk`. |
 | Medium | Young & Active Hackney 2030 programme link, annual affiliation fee, registration process and deadlines | The annual affiliation requirement and Steve Herbert’s affiliation role are included. No programme URL is embedded in the source, despite a “click link” instruction. |
-| Medium | Cross country, kwik cricket, tag rugby and orienteering formats, year groups, venues, entry details and dates | These are described as planned for 2026–27, as supplied. No additional operational details were provided. |
+| Medium | Cross country, kwik cricket, tag rugby and orienteering formats, year groups, venues and entry details; dates for sports other than cross country | The cross-country meet dates PDF is linked. The wider programme is otherwise described as planned for 2026–27. |
 | Medium | Donation destination, payment provider/account and Gift Aid wording or declaration | The supporter slide contains “GIFT AID PAGE & DONATIONS LINK???” but no working donation setup. Support enquiries use the HSAA email. No payment or Gift Aid claims were invented. |
 | Medium | Full tributes to David Grisdale and John Larter MBE | The introduction refers to tributes, but no standalone tributes were supplied. Short remembrance sections use the biographical facts available in the introduction and association list. |
 | Medium | Foundation intake/application details and confirmed programme dates | The 2016 founding, philosophy, Year 7 entry after district Year 6, three-year development pathway and Sports Empire Group support are included. Enquiries use HSAA’s email. |
@@ -51,7 +51,7 @@ Social media: public account names and handles from the supplied document are in
 - PowerPoint layout instructions, the ticker example website, placeholder link text and “DANIELE” instructions are implemented where applicable, rather than displayed as public copy.
 - The legacy HTML and old sitemap are reference material. Their obsolete navigation, counter scripts and historic supporter link were not reintroduced into the updated site.
 - All 17 public subject/logo images were included; the eighteenth image is the old sitemap, which was retained as reference. Embedded supporter/foundation logos were extracted for the relevant pages.
-- No social credentials, raw presentations, extraction data or private audit material is included in `dist`. The only Office download is the reviewed, blank alumni membership form.
+- No social credentials, raw presentations, extraction data or private audit material is included in `dist`. The only Office download is the reviewed, blank alumni membership form. Six October 2026 PDFs are also available.
 
 ## Forms and news
 
@@ -59,12 +59,12 @@ School results support the boys’ and girls’ Nine a side Leagues. District re
 
 Both result forms and the alumni form open the visitor’s email app for review and sending. They do not submit to a server, store entries, take payment or automatically update public results. A functioning email app is required. The supplied source asks for a direct email route; a server-backed service would need a separate receiving/storage setup.
 
-The ticker is maintained in `scripts/build-pages.py`. The source asks for weekly/fortnightly updates but supplies no automated feed or publishing process. The site retains manually editable, dated news and retains reduced-motion support; the pause/resume button was removed at the user's request.
+The ticker is maintained in `content/pages/index.html`. The source asks for weekly/fortnightly updates but supplies no automated feed or publishing process. The site retains manually editable, dated news and retains reduced-motion support; the pause/resume button was removed at the user's request.
 
 ## Verification and delivery
 
 - Local HTML, asset and anchor checks pass for all six HTML files.
-- Content coverage checks pass for the navigation, all 33 players, 10 association figures, 13 partners and 56 trophy seasons.
+- Content coverage checks pass for the navigation, all 38 players, 15 association figures, 15 partners, 56 trophy seasons and six PDF downloads.
 - JavaScript syntax and email form behavior checks cover required validation, school/district labels, membership fields and encoded email content.
 - The root homepage keeps its in-page anchors local instead of resolving them through a directory base URL.
 - The updated site is saved locally and packaged for download. No deployment was performed.
@@ -93,3 +93,13 @@ Social-media follow-up: removed the social-media section from both About us and 
 Social-media correction: following the user?s clarification, the supplied account document was inspected for public account information. Contact now includes Facebook (Hackney Primary Schools District Football Team), Instagram (@hackneydistrictteam), X (@HackSchfootball) and TikTok (@hackneydistrict). Profile links use the supplied handles; Facebook is shown by name because no exact page URL was supplied. The shared contact fragment also displays this information under About us. Login details are excluded from the site. This supersedes the previous no-social-accounts note.
 
 Facebook icon now links to a Facebook page search for the supplied name, pending an exact profile URL. All social links open in a new tab. Icon hover scales to 108% and retains platform colours.
+
+## October 2026 final updates
+
+The Word instruction file in `Final Updates Oct 2026/` has been applied. Five former district players and five association figures were added, Sonny Perkins's Wigan Athletic association was added, two supporters and their logos were added, six supplied PDFs were linked from their relevant sections, the Young & Active logo was placed on its programme section, and the two requested homepage passages were replaced. The draft Kay Trophy PDF was not published; the supplied `FINAL` file is used.
+
+The editable HTML has since been consolidated into six complete files in `content/pages/`. `scripts/build-pages.py` copies them to `dist/`; the former fragment files, assembly scripts and separate people/records inputs were removed after their content was incorporated.
+
+Club spellings and associations were checked online. [Gillingham's Aaron Rowe profile](https://www.gillinghamfootballclub.com/player/140) supports Huddersfield Town, Crewe and Gillingham; [BBC Sport's signing report](https://www.bbc.co.uk/sport/football/articles/cevv4qkleplo) also records Stockport County. [Exeter City's Andrew Oluwabori profile](https://www.exetercityfc.co.uk/player/294) supports Huddersfield Town, Peterborough United, Yeovil Town and Exeter City. [Southend's archived programme](https://cdn.hattersheritage.co.uk/2001-02%2BSeason%2BDONE%2FMatches%2FM4507%2BLuton%2BTown%2Bv%2BSouthend%2BUnited%2FProgramme%2FProgramme.pdf) records Mel Capleton's Blackpool and Leyton Orient associations. [A Charlton programme](https://cdn.hattersheritage.co.uk/1981-82%2BSeason%2BDONE%2FMatches%2FM3495%2BCharlton%2BAthletic%2Bv%2BLuton%2BTown%2FProgramme%2FProgramme.pdf) names Steve Browne. [Tottenham's match report](https://www.tottenhamhotspur.com/news/1087758/womens-under-19s-earn-hard-fought-point-against-arsenal) names Cairo Antoine-Eva in Arsenal's side, while [UEFA](https://www.uefa.com/womensunder17/teams/players/250215189--cairo-antoine/) lists Cairo Antoine in England's Under-17 team; the site therefore uses "Arsenal academy; England Under-17" rather than implying a senior England appearance. [Wigan Athletic Heritage](https://www.wiganathleticheritage.co.uk/player-profile/10543/sonny-perkins) records Sonny Perkins's Wigan move.
+
+Liz Prosser's source entry ends after "Jersey Staff (2009 –". The site records only "Jersey staff, 2009" and does not infer an end year. The supporter entry identifies Liam Kelly as Hackney's School Games Organiser, as supplied.

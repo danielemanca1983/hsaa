@@ -3,28 +3,33 @@
 Open `dist/index.html` in a browser. No installation is required to view the site.
 
 - `dist/`: six complete HTML pages together: `index.html`, `about.html`, `contact.html`, `football.html`, `other-sports.html` and `information.html`.
-- The main navigation links to the five main pages; the header Get in touch button opens the dedicated contact page. Sitemap subsections appear as normal content within their parent pages, including contact information under About us; there are no separate content-fragment pages or duplicate homepage.
+- The main navigation links to the five main pages; the header Get in touch button opens the dedicated contact page. Sitemap subsections appear within their parent pages, including contact information under About us.
 - `dist/css/styles.css` and `dist/js/main.js`: shared styling, menus, ticker and email forms.
 - `dist/assets/source/`: reviewed supplied photos and extracted logos.
-- `dist/downloads/`: the reviewed blank alumni membership form.
+- `dist/downloads/`: the reviewed blank alumni membership form and six October 2026 PDFs covering the committee, school competitions, cross country and district trophy draws.
 
 Upload the contents of `dist/` to a static web host, preserving its folders. `hsaa-website.zip` contains those deployable files.
 
 ## Editing and rebuilding
 
-- Edit `scripts/page_structure.py` for the page grouping and section links.
-- Edit `scripts/navigation.py` for the shared navigation.
-- Edit `content/pages/*.html` for the long-form public copy.
-- Edit `content/people.json` for former players, association figures and partners.
-- Edit `content/records.json` for the Lester Finch archive.
-- Edit `scripts/additional-pages.py` for page assembly, results forms and other-sports summaries.
-- Edit `scripts/build-pages.py` for the shared shell, homepage layout and ticker headlines.
+Edit the complete page in `content/pages/`:
 
-Run `python scripts/build-pages.py` to regenerate the site. Direct edits to generated HTML will be overwritten. The fragments in `content/pages/` are build inputs only; every published page in `dist/` already contains its complete content. Normal builds need only Python’s standard library; the one-off Office/image extraction scripts are not required.
+| Source file | Content |
+| --- | --- |
+| `index.html` | Home, welcome, ticker and mission |
+| `about.html` | Mission, history, committee and contact details |
+| `contact.html` | Contact details and social links |
+| `football.html` | Schools football, five a sides, nine a side, district teams and results form |
+| `other-sports.html` | Cross country, other sports and Young & Active |
+| `information.html` | Contacts and supporters, former players, association figures, foundation, district competitions and results form |
+
+Each source file contains its full HTML document, including navigation and footer. Edit `dist/css/styles.css` for shared styling and `dist/js/main.js` for interactions. Run `python scripts/build-pages.py` to copy the six source pages to `dist/`; direct edits to the six HTML files in `dist/` will be overwritten. Normal builds need only Python’s standard library.
 
 ## Checks
 
 Run `python scripts/check-site.py`, `python scripts/check-content.py`, `node --check dist/js/main.js`, and `node scripts/check-form-behavior.js`.
+
+The October 2026 source files and instructions are in `Final Updates Oct 2026/`. The published copies of the PDFs and logos are in `dist/downloads/` and `dist/assets/source/`. Rebuild HTML from `content/pages/`, then refresh the deployment archives after content changes.
 
 ## Content status
 
